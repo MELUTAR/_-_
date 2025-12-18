@@ -1,0 +1,106 @@
+#include <iostream>
+using namespace std;
+
+int main() {//tasl_1
+    int zet = 42;
+    int* ptr = &zet;
+
+    (*ptr)++;
+
+    cout << "адрес переменной: " << &zet << endl;
+    cout << "знач переменной: " << zet << endl;
+    cout << "знач через указатель: " << *ptr << endl;
+
+    return 0;
+}
+
+#include <iostream>
+using namespace std;
+
+int main() {//tasl_2
+    double gol = 42;
+    double* ptr = &gol;
+
+    cout << "стоимость через указатель: " << *ptr << endl;
+
+    *ptr = 52;
+
+    cout << "new стоимость: " << gol << endl;
+    cout << "стоимость через указатель: " << *ptr << endl;
+
+    return 0;
+}
+#include <iostream>
+using namespace std;
+
+int main() {
+    int vyr[5] = { 100, 500, 1000, 1500, 2000 };
+    int* p = vyr;
+    int sum = 0;
+
+    for (int i = 0; i < 5; i++) {
+        cout << *p << " ";
+        sum += *p;
+        p++;
+    }
+    cout << sum;
+}
+#include <iostream>
+using namespace std;
+
+int main() {//tasl_4
+    int a[10] = { 0 };
+    int* ptr = a;
+
+    *(ptr + 7) = 99;
+
+    cout << "Результаты тренировок:" << endl;
+    for (int i = 0; i < 10; i++) {
+        cout << a[i] << " ";
+    }
+    cout << endl;
+
+    return 0;
+}
+#include <iostream>
+using namespace std;
+
+int main() {//task_5
+    int ochki[6] = { 10, 20, 30, 40, 50, 67 };
+    int* p = ochki;
+    *(p + 1) = 40;
+
+    for (int i = 0; i < 6; i++)
+        cout << ochki[i] << " ";
+
+    cout << endl << ochki[1] << " " << *(p + 1);
+}
+
+#include <iostream>
+using namespace std;
+
+int main() {//tasl_6
+    int books[5] = { 15, 12, 18, 20, 14 };
+    int* ptr = &books[4];
+
+    for (int i = 0; i < 5; i++) {
+        cout << *ptr << " ";
+        ptr--;
+    }
+    cout << endl;
+
+    return 0;
+}
+#include <iostream>
+using namespace std;
+
+int main() {//tasl_7
+    int measurements[8] = { 42, 52, 48, 60, 51, 58, 50, 67 };
+    int* ptr1 = &measurements[0];
+    int* ptr2 = &measurements[5];
+
+    cout << (ptr2 - ptr1) << endl;
+    cout << (ptr2 - ptr1 - 1)  << endl;
+
+    return 0;
+}
